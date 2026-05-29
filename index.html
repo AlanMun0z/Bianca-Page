@@ -1,0 +1,392 @@
+export default function BiancaAdmissionsWebsite() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 text-slate-800 overflow-x-hidden">
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full backdrop-blur-xl bg-white/70 border-b border-white/30 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-xl font-semibold tracking-wide text-slate-700">
+              Bianca Tatone Branchini
+            </h1>
+            <p className="text-xs text-slate-500 tracking-[0.2em] uppercase">
+              Admissions Portfolio
+            </p>
+          </div>
+
+          <div className="group relative">
+            <button className="px-5 py-2 rounded-full bg-slate-800 text-white hover:bg-slate-700 transition-all duration-300 shadow-lg">
+              Menu
+            </button>
+
+            <div className="absolute right-0 mt-3 w-64 rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+              {[
+                ["Home", "home"],
+                ["Resume / CV", "resume"],
+                ["Personal Statement", "statement"],
+                ["Relevant Work", "work"],
+                ["Personal Interests", "interests"],
+                ["Admissions Video", "video"],
+              ].map(([label, id]) => (
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  className="block px-6 py-4 hover:bg-blue-50 transition-colors duration-300 text-slate-700"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center px-6"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(191,219,254,0.5),transparent_35%),radial-gradient(circle_at_bottom_left,_rgba(219,234,254,0.6),transparent_40%)]" />
+
+        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="uppercase tracking-[0.4em] text-sm text-blue-500 mb-6">
+              University Admissions Portfolio
+            </p>
+
+            <h1 className="text-6xl lg:text-7xl font-light leading-tight text-slate-800 mb-8">
+              Bianca
+              <span className="block font-semibold text-blue-400">
+                Tatone Branchini
+              </span>
+            </h1>
+
+            <p className="text-lg leading-relaxed text-slate-600 max-w-xl mb-10">
+              Multilingual high school student passionate about political
+              science, international relations, and global economic
+              development. Focused on leadership, communication, and creating
+              meaningful impact through discipline, resilience, and academic
+              ambition.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#resume"
+                className="px-8 py-4 rounded-full bg-slate-800 text-white hover:scale-105 transition-all duration-300 shadow-xl"
+              >
+                View Resume
+              </a>
+
+              <a
+                href="#statement"
+                className="px-8 py-4 rounded-full border border-slate-300 bg-white/70 backdrop-blur-xl hover:bg-white transition-all duration-300"
+              >
+                Read Statement
+              </a>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center">
+            <div className="absolute w-96 h-96 rounded-full bg-blue-200 blur-3xl opacity-40" />
+
+            <div className="relative backdrop-blur-xl bg-white/60 border border-white/40 rounded-[2rem] p-8 shadow-2xl w-full max-w-md">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+                alt="Portrait"
+                className="w-full h-[500px] object-cover rounded-[1.5rem]"
+              />
+
+              <div className="mt-6 grid grid-cols-2 gap-4 text-center">
+                <div className="bg-white/70 rounded-2xl p-4">
+                  <h3 className="text-2xl font-semibold text-blue-500">4</h3>
+                  <p className="text-sm text-slate-500">Languages</p>
+                </div>
+
+                <div className="bg-white/70 rounded-2xl p-4">
+                  <h3 className="text-2xl font-semibold text-blue-500">3</h3>
+                  <p className="text-sm text-slate-500">Countries Competed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RESUME */}
+      <section id="resume" className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16 text-center">
+            <p className="uppercase tracking-[0.3em] text-blue-500 text-sm mb-4">
+              Resume / CV
+            </p>
+            <h2 className="text-5xl font-light text-slate-800">
+              Academic & Professional Background
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="backdrop-blur-xl bg-white/70 rounded-[2rem] p-10 shadow-xl border border-white/40">
+              <h3 className="text-2xl font-semibold mb-6 text-slate-700">
+                Education
+              </h3>
+
+              <div className="space-y-6">
+                <div className="border-l-2 border-blue-300 pl-6">
+                  <h4 className="font-semibold text-lg">
+                    Universidad del Valle de México (UVM) – Mérida
+                  </h4>
+                  <p className="text-slate-500">High School Student</p>
+                  <p className="text-blue-500 mt-2">Expected Graduation: 2027</p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold mt-12 mb-6 text-slate-700">
+                Academic Interests
+              </h3>
+
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Political Science",
+                  "International Relations",
+                  "Public Policy",
+                  "Global Economics",
+                  "Diplomacy",
+                  "International Cooperation",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="backdrop-blur-xl bg-white/70 rounded-[2rem] p-10 shadow-xl border border-white/40">
+              <h3 className="text-2xl font-semibold mb-6 text-slate-700">
+                Languages
+              </h3>
+
+              <div className="space-y-5">
+                {[
+                  ["Spanish", "Native"],
+                  ["Italian", "Native"],
+                  ["English", "Advanced"],
+                  ["French", "Intermediate / Advanced"],
+                ].map(([language, level]) => (
+                  <div
+                    key={language}
+                    className="bg-white/80 rounded-2xl p-5 flex items-center justify-between"
+                  >
+                    <span className="font-medium">{language}</span>
+                    <span className="text-blue-500">{level}</span>
+                  </div>
+                ))}
+              </div>
+
+              <h3 className="text-2xl font-semibold mt-12 mb-6 text-slate-700">
+                Leadership & Skills
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                {[
+                  "Public Speaking",
+                  "Leadership",
+                  "Critical Thinking",
+                  "Team Collaboration",
+                  "Communication",
+                  "Organization",
+                  "Multilingual Communication",
+                  "Adaptability",
+                ].map((skill) => (
+                  <div
+                    key={skill}
+                    className="bg-slate-50 rounded-xl px-4 py-3"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PERSONAL STATEMENT */}
+      <section id="statement" className="py-32 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[0.3em] text-blue-500 text-sm mb-4">
+              Personal Statement
+            </p>
+
+            <h2 className="text-5xl font-light text-slate-800 mb-8">
+              Voice, Discipline & Purpose
+            </h2>
+
+            <blockquote className="text-2xl italic text-slate-500 max-w-3xl mx-auto leading-relaxed">
+              “I have never been afraid of taking the first step, only of
+              wasting it.”
+            </blockquote>
+          </div>
+
+          <div className="backdrop-blur-xl bg-white/70 rounded-[2.5rem] p-10 lg:p-16 shadow-2xl border border-white/40 leading-9 text-lg text-slate-600 space-y-8">
+            <p>
+              My journey has been shaped by a question: how do I turn pressure
+              into purpose? Growing up, I learned quickly that expectations are
+              constant, but the way you respond to them is a choice.
+            </p>
+
+            <p>
+              Instead of comparing myself to others, I began to study them,
+              understanding what made them effective and how I could build my
+              own approach. I did not want to imitate; I wanted to refine who I
+              already was.
+            </p>
+
+            <p>
+              Since then, I have actively pursued challenges that demand more
+              from me. Whether leading a team or contributing to a group, I
+              focus on execution, structure, and meaningful impact.
+            </p>
+
+            <p>
+              Through these experiences, I have come to understand that
+              strength is not something you announce; it is something you
+              demonstrate repeatedly. My voice matters because I have invested
+              in it, challenged it, and refined it.
+            </p>
+
+            <p>
+              Looking ahead, I am committed to continuing this trajectory with
+              intention and discipline, using every opportunity as a chance to
+              grow, contribute, and expand my impact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* RELEVANT WORK */}
+      <section id="work" className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[0.3em] text-blue-500 text-sm mb-4">
+              Relevant Work
+            </p>
+            <h2 className="text-5xl font-light text-slate-800">
+              Experiences & Achievements
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "International Athletic Competitions",
+                text: "Participated in international competitions in Italy, the United States, and Mexico, developing discipline, resilience, and performance under pressure.",
+              },
+              {
+                title: "Dance Workshop",
+                text: "Active participant in artistic performance and movement expression through UVM Mérida's dance program.",
+              },
+              {
+                title: "Theater Workshop",
+                text: "Developed confidence, communication, and stage presence through theatrical performance and collaborative productions.",
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="group backdrop-blur-xl bg-white/70 rounded-[2rem] p-8 shadow-xl border border-white/40 hover:-translate-y-3 transition-all duration-500"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center mb-6 text-blue-500 text-2xl">
+                  ✦
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4 text-slate-700">
+                  {card.title}
+                </h3>
+
+                <p className="leading-8 text-slate-600">{card.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INTERESTS */}
+      <section id="interests" className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[0.3em] text-blue-500 text-sm mb-4">
+              Personal Interests
+            </p>
+            <h2 className="text-5xl font-light text-slate-800">
+              Beyond Academics
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              "International Affairs",
+              "Political Systems",
+              "Global Economics",
+              "Performing Arts",
+              "Leadership Development",
+              "Cultural Exchange",
+              "Diplomacy",
+              "Public Policy",
+            ].map((interest) => (
+              <div
+                key={interest}
+                className="backdrop-blur-xl bg-white/70 border border-white/40 rounded-[2rem] p-8 text-center shadow-xl hover:bg-blue-50 transition-all duration-300"
+              >
+                <div className="text-3xl mb-4">✧</div>
+                <h3 className="text-lg font-medium text-slate-700">
+                  {interest}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO */}
+      <section id="video" className="py-32 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="uppercase tracking-[0.3em] text-blue-500 text-sm mb-4">
+            Admissions Video
+          </p>
+
+          <h2 className="text-5xl font-light text-slate-800 mb-14">
+            Video Presentation
+          </h2>
+
+          <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-br from-slate-800 to-blue-900 min-h-[500px] flex items-center justify-center shadow-2xl">
+            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_white,_transparent_60%)]" />
+
+            <div className="relative z-10 text-center text-white px-6">
+              <div className="w-28 h-28 rounded-full border border-white/30 mx-auto flex items-center justify-center text-4xl backdrop-blur-xl bg-white/10 mb-8 animate-pulse">
+                ▶
+              </div>
+
+              <h3 className="text-4xl font-light mb-6">
+                Admissions Video Coming Soon
+              </h3>
+
+              <p className="max-w-2xl mx-auto text-blue-100 leading-8 text-lg">
+                This section will feature a personal admissions video presenting
+                academic goals, leadership experiences, and future aspirations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="py-12 border-t border-slate-200 text-center text-slate-500">
+        <p>
+          Bianca Tatone Branchini • University Admissions Portfolio • 2026
+        </p>
+      </footer>
+    </div>
+  );
+}
